@@ -8,11 +8,15 @@ import { MessagesModule } from 'primeng/messages';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MessageService } from 'primeng/api';
-
+import { ChartComponent } from './components/chart/chart.component';
+import { DataService } from './services/data.service';
+import { NgChartsModule } from 'ng2-charts';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ChartComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,9 @@ import { MessageService } from 'primeng/api';
     FileUploadModule,
     ToastModule,
     MessagesModule,
+    NgChartsModule,
+    CardModule
   ],
-  providers: [MessageService]
+  providers: [MessageService, DataService]
 })
 export class DashboardModule { }
