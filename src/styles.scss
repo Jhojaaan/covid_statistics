@@ -11,11 +11,20 @@ body{
 }
 
 .app-container{
-    min-height: calc(100vg - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
 
     .container{
-        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 40px 0px 40px 0px ;
+        height: 100%;
         margin: 0 auto;
-        padding: 0 20px;
     }
 }

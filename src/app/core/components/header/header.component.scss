@@ -1,16 +1,17 @@
 .header {
-    height: 72px;
-    &__container {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__logo-img{
-        width: 170px;
-        height: 70px;
-    }
+  height: 72px;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a4657;
+    padding: 10px;
   }
+
+  &__logo-img {
+    width: 170px;
+    background: rgb(216, 245, 250);
+    padding: 3px 20px 3px 20px;
+    border-radius: 5px;
+  }
+}

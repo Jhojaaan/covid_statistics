@@ -1,33 +1,48 @@
 <div class="container">
-    <div class="container__charts">
-        <div class="stateWithHighestVictims">
-            <p-card header="Estado con mayor acumulado a la fecha">
-                <p><b>Estado: </b> {{stateWithHighestVictimsValue.state}}</p>
-                <p><b>Victimas: </b> {{stateWithHighestVictimsValue.value | number: '1.0-0'}}</p>
-            </p-card>
-        </div>
-        <div class="stateWithLowestVictimsValue">
-            <p-card header="Estado con menor acumulado a la fecha">
-                <p><b>Estado: </b>{{stateWithLowestVictimsValue.state}}</p>
-                <p><b>Victimas: </b>{{stateWithLowestVictimsValue.value}}</p>
-            </p-card>
-        </div>
-        <div class="stateWithHighestPercentageOfVictimsValue">
-            <p-card header="Estado más afectado">
-                <p>El estado más afectado es <b>{{stateWithHighestPercentageOfVictimsValue.state}}</b> esto en relación del porcentaje de porcentaje vs victimas.</p>
-                <p><b>Porcentaje: </b>{{stateWithHighestPercentageOfVictimsValue.value}}%</p>
-            </p-card>
-        </div>
-        <div class="stateWithHighestsVictims">
-            <p-card header="Porcentaje total de muertes">
-                <canvas baseChart class="chart"
-                [data]="pieChartData"
-                [type]="'pie'"
-                [options]="pieChartOptions"
-                #chartPie>
-                
-                </canvas>
-            </p-card>
-        </div>
+  <div class="container__charts">
+    <div class="container__charts__left_charts">
+      <div class="stateWithHighestVictims">
+        <p-card class="title" header="Estado con mayor acumulado a la fecha">
+          <p><b>Estado: </b> {{ stateWithHighestVictimsValue.state }}</p>
+          <p>
+            <b>Victimas: </b>
+            {{ stateWithHighestVictimsValue.value | number : "1.0-0" }}
+          </p>
+        </p-card>
+      </div>
+      <div class="stateWithLowestVictimsValue">
+        <p-card class="title" header="Estado con menor acumulado a la fecha">
+          <p><b>Estado: </b>{{ stateWithLowestVictimsValue.state }}</p>
+          <p><b>Victimas: </b>{{ stateWithLowestVictimsValue.value }}</p>
+        </p-card>
+      </div>
+      <div class="stateWithHighestPercentageOfVictimsValue">
+        <p-card class="title" header="Estado más afectado">
+          <p>
+            El estado más afectado es
+            <b>{{ stateWithHighestPercentageOfVictimsValue.state }}</b> esto en
+            relación del porcentaje, población vs victimas.
+          </p>
+          <p>
+            <b>Porcentaje: </b
+            >{{ stateWithHighestPercentageOfVictimsValue.value }}%
+          </p>
+        </p-card>
+      </div>
     </div>
+
+    <div class="stateWithHighestsVictims">
+      <p-card header="Porcentaje total de muertes">
+        <canvas
+          baseChart
+          class="chart"
+          [data]="pieChartData"
+          [type]="'pie'"
+          [options]="pieChartOptions"
+          #chartPie
+        >
+        </canvas>
+      </p-card>
+    </div>
+  </div>
 </div>

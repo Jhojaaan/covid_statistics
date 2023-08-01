@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
-import { catchError, mergeMap, of } from 'rxjs';
-
-
 
 
 @Component({
@@ -21,7 +18,7 @@ export class DashboardComponent {
     
     if(localStorage.getItem('file')){
       this.uploadedFiles.push({name: localStorage.getItem('file')});
-      // this.router.navigate(['/dashboard/chart']);
+      this.router.navigate(['/dashboard/chart']);
     }
 
   }
@@ -50,15 +47,9 @@ export class DashboardComponent {
       (response: any) => {
         localStorage.setItem('file', this.uploadedFiles[0].name);
         this.router.navigate(['/dashboard/chart']);
-      },
-      (error) => {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: error.message });
-
       }
     );
   }
-
-
   
   public onUpload(event:any) {
       for(let file of event.files) {

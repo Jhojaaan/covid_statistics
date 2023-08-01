@@ -7,6 +7,8 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -19,8 +21,9 @@ import { AuthService } from './services/auth.service';
     ButtonModule,
     InputTextModule,
     ReactiveFormsModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule,
   ],
-  providers: [AuthService]
+  providers: [AuthService, MessageService]
 })
 export class AuthModule { }

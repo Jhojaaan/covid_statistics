@@ -8,22 +8,17 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'smartsoft';
-
   currentRoute: string = '';
 
-  /**
-   * Función que ctualiza la propiedad currentRoute con la URL de la página actual
-   * Se usa para esconder el header cuando se está en el login
-   */
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         console.log(event.url);
-        
         this.currentRoute = event.url;
       }
-    })
+    });
   }
-
-
+  isAuthRoute(): boolean {
+    return this.currentRoute.startsWith('/auth');
+  }
 }

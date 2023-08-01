@@ -1,17 +1,22 @@
 <header class="header">
-    <div class="header__container">
-      <div class="header__logo">
-        <a href="/" class="header__logo-link">
-          <img
-            src="https://www.smartsoftlabs.com/wp-content/uploads/2020/08/cropped-Logo.png"
-            alt="logo"
-            class="header__logo-img"
-          />
-        </a>
-      </div>
-      <div class="header__menu">
-        <button pButton pRipple label="Cerrar sesión" class="p-button-danger" (click)="LogOut()"></button>
-        
-      </div>
+  <div class="header__container">
+    <div class="header__logo">
+      <a href="/" class="header__logo-link">
+        <img
+          src="https://www.smartsoftlabs.com/wp-content/uploads/2020/08/cropped-Logo.png"
+          alt="logo"
+          class="header__logo-img"
+        />
+      </a>
     </div>
-  </header>
+    <div class="header__menu">
+      <button
+        pButton
+        pRipple
+        label="Cerrar sesión"
+        class="p-button-danger button"
+        (click)="LogOut()"
+      ></button>
+    </div>
+  </div>
+</header>
