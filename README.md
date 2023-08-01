@@ -1,6 +1,5 @@
 # COVID-19 Stats App
 
-![Captura de pantalla](ruta/a/captura-de-pantalla.png) <!-- Si tienes una captura de pantalla de la aplicación, agrega la ruta aquí -->
 
 Esta es una aplicación que apartir de un archivo .csv con los datos de las estadisticas del covid, permite visualizar en un gráfico. Además, de responder unas preguntas que se hicieron en el documento de la prueba.
 
